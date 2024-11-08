@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Flexbox e Grid</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 20px;
+    }
+    .header, .footer {
+      grid-column: span 2;
+      background-color: lightcoral;
+      text-align: center;
+      padding: 20px;
+    }
+    .sidebar {
+      background-color: lightgray;
+      padding: 20px;
+    }
+    .main {
+      background-color: lightblue;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Layout responsivo para telas menores */
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Cabeçalho</div>
+    <div class="sidebar">Barra Lateral</div>
+    <div class="main">Conteúdo Principal</div>
+    <div class="footer">Rodapé</div>
+  </div>
+</body>
+</html>
